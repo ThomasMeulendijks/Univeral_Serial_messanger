@@ -3,13 +3,13 @@ bool collectingMessage;
 bool collectingValue;
 
 String serialMessage; // often used as a command
-String serialValue[serialValueSize]; // often used as params of the command (can contain ints(short I think))
+
 
 const int serialValueSize = 10; // Pleas ajust the leaght of the array to suit your needs
-
+String serialValue[serialValueSize]; // often used as params of the command (can contain ints(short I think))
 bool valueIsInt[serialValueSize]; // used to trak if a value is a int
 
-int currentSerialValueIndex; // the index of the value we are currently collecting
+int currentSerialValueIndex = -1; // the index of the value we are currently collecting
 
 
 void setup() {
